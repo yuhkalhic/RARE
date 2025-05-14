@@ -1,39 +1,10 @@
 <h1 align="center"> <img src="image/logo.png" width="38" height="38" alt="">  RARE: Retrieval-Augmented Reasoning Modeling </h1>
 
-## 💡 Overview
-
-We propose the **RARE** training framework, a novel paradigm that decouples knowledge storage from reasoning modeling. This framework accelerates reasoning modeling via bypassing rote memorization of lower-level knowledge. At present, we have made available several materials pertinent to the *medical and legal domains, as well as open-domain multi-modal scenarios. (Work in Progress)* 
-
-<table class="center">
-    <tr>
-        <td width=100% style="border: none"><img src="image/figure1.png" style="width:100%"></td>
-    </tr>
-    <tr>
-        <td width="100%" style="border: none; text-align: center; word-wrap: break-word">
-              Motivation of RARE. Left: A pyramid-shaped Bloom’s Taxonomy, illustrating the cognitive hierarchy from basic "Remember" to advanced "Evaluate" and "Create" levels. Right: The correspondence between Domain Knowledge and Domain Thinking with Bloom’s cognitive hierarchy (example related to government bond yields). In contrast to domain knowledge, domain thinking corresponds to the higher-order cognitive process—although relatively <strong>rare</strong>, it plays a crucial role.
-      </td>
-    </tr>
-</table>
-
-<table class="center">
-    <tr>
-        <td width=100% style="border: none"><img src="image/figure2.png" style="width:100%"></td>
-    </tr>
-    <tr>
-        <td width="100%" style="border: none; text-align: center; word-wrap: break-word">
-              Demonstration of RARE. A real data sample, which showcases the effectiveness and superiority of RARE.
-      </td>
-    </tr>
-</table>
-
-<!-- ## 📣 Latest News -->
-
 ## 🔧 Installation
 
 Complete the environment deployment for this project through the following methods.
 
 ```
-git clone https://github.com/Open-DataFlow/RARE
 cd RARE
 
 conda create -n rare python=3.10
