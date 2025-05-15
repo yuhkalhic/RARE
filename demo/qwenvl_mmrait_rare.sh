@@ -3,9 +3,7 @@
 huggingface-cli download whalezzz/M2RAG --repo-type dataset --local-dir process --include "fact_verify/*"
 python process/process_mmrait.py
 
-modelscope download \
-    --model Qwen/Qwen2.5-VL-32B-Instruct \
-    --local_dir saves/Qwen2.5-VL-32B-Instruct
+huggingface-cli download Qwen/Qwen2.5-VL-32B-Instruct --local-dir saves/Qwen2.5-VL-32B-Instruct
 
 # distill
 python inference/vllm_infer_mm.py \
