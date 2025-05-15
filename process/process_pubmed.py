@@ -168,16 +168,12 @@ def process_dataset(processor, dataset_items, dataset_type, target_names):
             if item_name not in target_names:
                 continue
 
-            # 使用更新后的doc_path
             doc_path = item["pred"]["doc_path"]
 
             doc_path = doc_path.replace("\\", "/")
 
-            # 确保文件路径存在
             if not os.path.exists(doc_path):
-                # 尝试从工作目录解析相对路径
                 if doc_path.startswith("process/"):
-                    # 移除前缀"process/"以使其相对于当前目录
                     alternative_path = doc_path[8:]
                     if os.path.exists(alternative_path):
                         doc_path = alternative_path
