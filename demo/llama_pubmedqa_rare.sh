@@ -1,6 +1,6 @@
 python process/process_pubmed.py
 
-modelscope download --model Qwen/QwQ-32B --local_dir saves/QwQ-32B
+huggingface-cli download Qwen/QwQ-32B --local-dir saves/QwQ-32B
 
 # distill
 python inference/vllm_infer_text.py \
