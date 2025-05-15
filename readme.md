@@ -60,12 +60,12 @@ Through the above steps, the construction of prompts and answers for the dataset
 2. Distill Reasoning Model
 ```
 # For medqa, pubmed, pubhealth, casehold, these steps should be done
-modelscope download --model Qwen/QwQ-32B --local_dir saves/QwQ-32B
+huggingface-cli download Qwen/QwQ-32B --local-dir saves/QwQ-32B
 python inference/vllm_infer_text.py --model_name_or_path saves/QwQ-32B --dataset_path data/train_medqa.json --template qwen
 python process/select_true.py data/train_medqa.json # Only for medqa and casehold
 
 # For mmrait, these steps should be done
-modelscope download --model Qwen/Qwen2.5-VL-32B-Instruct --local_dir saves/Qwen2.5-VL-32B-Instruct
+huggingface-cli download Qwen/Qwen2.5-VL-32B-Instruct --local-dir saves/Qwen2.5-VL-32B-Instruct
 python scripts/vllm_infer_mm.py --model_name_or_path saves/Qwen2.5-VL-32B-Instruct --dataset_path data/train_mmrait.json
 python process/select_true.py data/train_mmrait.json --mm
 ```
